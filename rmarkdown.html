@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/717b915945.js" crossorigin="anonymous"></script>
+        <script src="js/lib.js"></script>
+        <title>My Profile: Cesar Perez</title>
+    </head>
+
+    <body onload="update_theme(); load_language()">
+        <header>
+            <nav>
+                <button type="button" id = "to_eng" onclick="change_language('eng','esp')">ENG</button>
+                <button type="button" id = "to_esp" onclick="change_language('esp','eng')">ESP</button>
+            </nav> 
+            <nav>
+                <a href="cv/CV_Cesar_Perez_Eng.pdf" target="_blank" class="eng"><i class="fa-solid fa-file-pdf  fa-3x"></i></a>
+                <a href="cv/CV_Cesar_Perez_Esp.pdf" target="_blank" class="esp"><i class="fa-solid fa-file-pdf  fa-3x"></i></a>
+                <a href="https://www.linkedin.com/in/c%C3%A9sar-rub%C3%A9n-p%C3%A9rez-vald%C3%A9s-b77676113/" target="_blank"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+                <a href="mailto:perezvaldesruben@gmal.com.com"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i></a>
+            </nav>
+            <img src="img/MyPic.jpg" alt="My photo" id = "profile">   
+        </header>
+        <nav class="eng main_nav">
+            <a href="index.html">Home</a>
+            <a href="rmarkdown.html" class="active">R Markdown</a>
+        </nav>
+        <nav class="esp main_nav">
+            <a href="index.html">Inicio</a>
+            <a href="rmarkdown.html" class="active">R Markdown</a>
+        </nav>
+        <section class="eng">
+                <h1>My Notebooks</h1>
+                <p>In this section, you will find R language coding examples applied to Data Analysis, specifically, data exploration. You'll find links for each case study to either, an HTML version, my Kaggle profile or both of them if available.</p> 
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>HTML</th>
+                        <th>Kaggle</th>
+                    </tr>
+                    <tr>
+                        <td>Google Capstone: Bicycle Trip Analysis</td>
+                        <td>This report present an exploratory analysis about bicycle usage behaviour from customers of a company hosted on Chicago, Illinois. Its part of the Google Data Analytics Program (GDAP) available on Coursera.</td>
+                        <td><a href="rmarkdown/Bicycle-Trip-Analysis-R.html" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                        <td><a href="https://www.kaggle.com/code/rubenpv/google-capstone-bicycle-trip-analysis" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>Google Capstone: Fitness Device Usage Analysis.</td>
+                        <td>This report presents an exploratory analysis about a sample of 33 participants using fitness devices from April 12th to May 12th, 2016. Its part of the Google Data Analytics Program (GDAP) available on Coursera.</td>
+                        <td><a href="rmarkdown/Fitness-Device-Usage-Analysis-R.html" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                        <td><a href="https://www.kaggle.com/code/rubenpv/google-capstone-fitness-device-usage-analysis" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>Hotel Booking Analysis.</td>
+                        <td>This report presents an exploratory analysis to shows differences on booking trends among two hotels.</td>
+                        <td><a href="rmarkdown/hotel-booking-analysis-R.html" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                        <td><a href="https://www.kaggle.com/code/rubenpv/hotel-booking-analysis" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>Dating App Review Analysis.</td>
+                        <td>This report presents a qualitative analysis about customers opinions using dating apps.</td>
+                        <td><a href="rmarkdown/Dating-app-review-analysis-R.html" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                        <td><a href="https://www.kaggle.com/code/rubenpv/dating-app-review-analysis" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                    </tr>
+                </table>
+        </section>
+        <section class="esp">
+            <h1>Mis Notebooks</h1>
+            <p>En esta sección, encontrarás ejemplos de uso utilizando lenguange R para el análisis de datos. Encotrarás los links para visitar ya sea una version en HTML, Kaggle o ambos.</p> 
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>HTML</th>
+                    <th>Kaggle</th>
+                </tr>
+                <tr>
+                    <td>Google Capstone: Bicycle Trip Analysis</td>
+                    <td>Este reporte presenta un análisis exploratorio sobre comportamiento observado sobre el uso de bicicletas de clientes de una empresa localizada en la ciudad de Chicago, Illinois. Este es un caso de estudio para la certificacion del "Google Data Analytics Program (GDAP)" disponible en Coursera.</td>
+                    <td><a href="rmarkdown/Bicycle-Trip-Analysis-R.html" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                    <td><a href="https://www.kaggle.com/code/rubenpv/google-capstone-bicycle-trip-analysis" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Google Capstone: Fitness Device Usage Analysis.</td>
+                    <td>Este reporte presenta un análisis exploratorio sobre una muestra de 33 participantes que utilizaron dispositivos para el control de peso durante el periodo comprendido del 12 de abril al 12 de mayo del año 2016. Este es un caso de estudio para la certificacion del "Google Data Analytics Program (GDAP)" disponible en Coursera.</td>
+                    <td><a href="rmarkdown/Fitness-Device-Usage-Analysis-R.html" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                    <td><a href="https://www.kaggle.com/code/rubenpv/google-capstone-fitness-device-usage-analysis" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Hotel Booking Analysis.</td>
+                    <td>Este reporte presenta un análisis exploratorio para mostrar diferencias en tendencias de usuarios al realizar reservaciones en dos tipos de hoteles.</td>
+                    <td><a href="rmarkdown/hotel-booking-analysis-R.html" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                    <td><a href="https://www.kaggle.com/code/rubenpv/hotel-booking-analysis" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Dating App Review Analysis.</td>
+                    <td>Este reporte presenta un análisis cualitativo sobre las opiniones de usuarios al utilizar aplicaciones de citas.</td>
+                    <td><a href="rmarkdown/Dating-app-review-analysis-R.html" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                    <td><a href="https://www.kaggle.com/code/rubenpv/dating-app-review-analysis" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                </tr>
+            </table>
+    </section>
+    </body>
+</html>
