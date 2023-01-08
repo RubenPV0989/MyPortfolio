@@ -54,6 +54,8 @@ header{
     font-size: 1.3em;
     background-color: white;
     opacity: 0.6;
+    border-radius: 8px;
+    border-style: none;
   }
 
   #profile {
