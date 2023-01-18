@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/717b915945.js" crossorigin="anonymous"></script>
+        <script src="js/lib.js"></script>
+        <title>My Profile: Cesar Perez</title>
+    </head>
+
+    <body onload="update_theme(); load_language()">
+        <header>
+            <nav>
+                <button type="button" id = "to_eng" onclick="change_language('eng','esp')">ENG</button>
+                <button type="button" id = "to_esp" onclick="change_language('esp','eng')">ESP</button>
+            </nav> 
+            <nav>
+                <a href="cv/CV_Cesar_Perez_Eng.pdf" target="_blank" class="eng"><i class="fa-solid fa-file-pdf  fa-3x"></i></a>
+                <a href="cv/CV_Cesar_Perez_Esp.pdf" target="_blank" class="esp"><i class="fa-solid fa-file-pdf  fa-3x"></i></a>
+                <a href="https://www.linkedin.com/in/c%C3%A9sar-rub%C3%A9n-p%C3%A9rez-vald%C3%A9s-b77676113/" target="_blank"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+                <a href="mailto:perezvaldesruben@gmal.com.com"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i></a>
+            </nav>
+            <img src="img/MyPic.jpg" alt="My photo" id = "profile">   
+        </header>
+        <nav class="eng main_nav">
+            <a href="index.html">Home</a>
+            <a href="rmarkdown.html">R Markdown</a>
+            <a href="jupyter.html" class="active">Jupyter</a>
+        </nav>
+        <nav class="esp main_nav">
+            <a href="index.html">Inicio</a>
+            <a href="rmarkdown.html">R Markdown</a>
+            <a href="jupyter.html" class="active">Jupyter</a>
+        </nav>
+        <section class="eng">
+                <h1>Jupyter</h1>
+                <p>In this section, you will find <b>Python</b> coding examples, most of them focused on automation of IT task.</p> 
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Notebook</th>
+                    </tr>
+                    <tr>
+                        <td>Using Recursive Functions to Scan the File System</td>
+                        <td>This article shows how to use recursive functions, the use case will be to generate a report havinf information about our file system, we'll use this repo as an example.</td>
+                        <td><a href="jupyter\FileScan\FileSystem_Scan.html" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                    </tr>
+                </table>
+        </section>
+        <section class="esp">
+            <h1>Jupyter</h1>
+            <p>En esta sección encontraras ejemplos de programación en <b>Python</b>, principalmente enfocados a la automatización de tareas en TI.</p> 
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Notebook</th>
+                </tr>
+                <tr>
+                    <td>Using Recursive Functions to Scan the File System</td>
+                    <td>Este artículo muestra un ejemplo de uso de funciones recursivas. El caso de uso será la generación de un reporte sobre nuestro file system, utilizaremos este mismo repo como ejemplo.</td>
+                    <td><a href="jupyter\FileScan\FileSystem_Scan.html" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                </tr>
+            </table>
+    </section>
+    </body>
+</html>

@@ -113,7 +113,9 @@ td:nth-child(n+3){
 td:hover:nth-child(n+3){
   font-size: 0.8em;
   }
-
+  ul{
+    font-size: 1em;
+    }
 p{
   font-size: 1em;
   }
@@ -128,9 +130,8 @@ p{
   background-image: linear-gradient(to right,rgb(95, 124, 255) ,rgb(255, 255, 255));
   width: 100%;
   height: 5%;
-  vertical-align: top;
-  padding-top: 3%;
-  padding-bottom: 3%;
+  padding-top: 10%;
+  padding-bottom: 0%;
   }
       
 .main_nav a{
@@ -150,12 +151,8 @@ p{
   opacity: 1;
   }
     
-.main_nav a:first-child{
-  margin-left: 35%;
-  }
-    
 section{
-  margin-top: 10%;
+  margin-top: 15%;
   display:inline-block;
   position: static;
   background-color: rgb(255, 255, 255);
@@ -183,7 +180,7 @@ section{
       position: absolute;
       background-image: linear-gradient(to right, rgb(95, 124, 255) ,rgb(255, 255, 255));
       width: 15%;
-      height: 100%;
+      height: 200vh;
       vertical-align: top;
       padding: 1%;
     }
@@ -198,7 +195,7 @@ section{
       padding-top: 10%;
       padding-bottom: 10%;
       width: 90%;
-      font-size: 1.1em;
+      font-size: 1.2em;
     } 
     
     .main_nav .active{
@@ -224,29 +221,32 @@ section{
     h1 {
       color: rgb(95, 124, 255);
       font-family: Arial;
-      font-size: 1.7em;
+      font-size: 1.8em;
       }
 
     th{
       background-color: rgb(169,169,169);
       color: rgb(255, 255, 255);
-      font-size: 0.8em;
+      font-size: 0.9em;
       font-weight: bold;
       }
     td{
-      font-size: 0.7em;
+      font-size: 0.8em;
       } 
 
     td:hover:nth-child(n+3){
-      font-size: 0.8em;
+      font-size: 0.9em;
       }
+      ul{
+        font-size: 1.1em;
+        }
       
     p{
-      font-size: 0.8em;
+      font-size: 1.1em;
       }
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 900px) {
     #profile {
       border-radius:50% 50% 50% 50%;  
       width:18%;
@@ -265,7 +265,7 @@ section{
         position: absolute;
         background-image: linear-gradient(to right, rgb(95, 124, 255) ,rgb(255, 255, 255));
         width: 15%;
-        height: 100%;
+        height: 150vh;
         vertical-align: top;
         padding: 1%;
       }
@@ -322,7 +322,9 @@ section{
       td:hover:nth-child(n+3){
         font-size: 1.3em;
         }
-        
+      ul{
+          font-size: 1.3em;
+          }
       p{
         font-size: 1.3em;
         }

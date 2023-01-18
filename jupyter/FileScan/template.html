@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>File Scan Report</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>body {
+                background-image: linear-gradient(to right,rgb(95, 124, 255) ,rgb(255, 255, 255));
+                font-family: Arial;
+                margin: 1%;
+                padding: 1%;
+              }
+            h1{
+              text-align: center;
+            }
+            h2{
+              text-align: center;
+            }
+            pre{
+                border: 0;
+                margin: 0;
+                padding:0;
+            }
+            #master{
+              opacity: 0.7;
+              background-color: white;
+            }
+            .dataframe{
+              text-align: center;
+            }
+            @media (min-width: 900px) {
+              #file_tree{
+                  width: 30vw;
+                  height: 80vh;
+                  display: inline-block;
+                }
+              #pie_cont{
+                  width: 30vw;
+                  height: 80vh;
+                  display: inline-block;
+                  vertical-align: top;
+                  overflow: hidden;
+                }
+              #table{
+                  width: 30vw;
+                  height: 80vh;
+                  display: inline-block;
+                  vertical-align: top;
+                }
+              }
+          
+      </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable(pie_chart_data_goes_here); 
+        var options = {
+                      title: 'Size by File Extention',
+                      pieHole: 0.3,
+                      chartArea:{width:'80%',height:'80%', left:'1%'},
+                      titleTextStyle: {color: 'Black', fontName: 'Arial', fontSize: 15},
+                      legend: {position: 'bottom'}};
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+        }
+      </script>
+    </head>
+
+        <body>
+          <h1>File Scan Report</h1>
+          <div id="master">
+            <div id="file_tree"><h2>File Tree</h2>file_tree_goes_here</div>
+            <div id="table"><h2>Summary Table</h2>table_goes_here</div>
+            <div id="pie_cont">
+              <h2>Pie Chart</h2>
+              <div id="piechart"></div>
+            </div>
+          </div>
+        </body>
+</html>
