@@ -11,37 +11,46 @@
               }
             h1{
               text-align: center;
-            }
+              }
             h2{
               text-align: center;
-            }
+              }
             pre{
                 border: 0;
                 margin: 0;
                 padding:0;
-            }
+              }
             #master{
               opacity: 0.7;
               background-color: white;
-            }
+              }
+            #pie_cont{
+                overflow: hidden;
+                }
+            #piechart{
+                padding-left: 8%;
+              }
             .dataframe{
-              text-align: center;
+              margin: 0 auto;
             }
-            @media (min-width: 900px) {
+            pre{
+                padding-left: 8%;
+                }
+            @media (min-width: 850px) {
               #file_tree{
                   width: 30vw;
                   height: 80vh;
                   display: inline-block;
                 }
               #pie_cont{
-                  width: 30vw;
+                  width: 35vw;
                   height: 80vh;
                   display: inline-block;
                   vertical-align: top;
                   overflow: hidden;
                 }
               #table{
-                  width: 30vw;
+                  width: 25vw;
                   height: 80vh;
                   display: inline-block;
                   vertical-align: top;
@@ -55,7 +64,7 @@
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
-        var data = google.visualization.arrayToDataTable([['File type', 'Size'], ['html', 6992.631], ['jpg', 3474.441], ['pdf', 280.67], ['jpeg', 186.387], ['ipynb', 11.391], ['css', 4.526], ['js', 3.698], ['md', 0.044]]); 
+        var data = google.visualization.arrayToDataTable([['File type', 'Size'], ['html', 6993.091], ['jpg', 3474.441], ['pdf', 280.67], ['jpeg', 186.387], ['ipynb', 11.391], ['css', 4.526], ['js', 3.698], ['md', 0.044]]); 
         var options = {
                       title: 'Size by File Extention',
                       pieHole: 0.3,
@@ -116,7 +125,7 @@
     <tr>
       <th>html</th>
       <td>10.0</td>
-      <td>6992.63</td>
+      <td>6993.09</td>
       <td>63.84</td>
     </tr>
     <tr>
