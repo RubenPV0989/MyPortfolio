@@ -55,11 +55,11 @@
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
-        var data = google.visualization.arrayToDataTable([['File type', 'Size'], ['html', 6992.462], ['jpg', 3474.441], ['pdf', 280.67], ['jpeg', 186.387], ['ipynb', 11.391], ['css', 6.244], ['js', 3.698], ['md', 0.044]]); 
+        var data = google.visualization.arrayToDataTable([['File type', 'Size'], ['html', 6992.631], ['jpg', 3474.441], ['pdf', 280.67], ['jpeg', 186.387], ['ipynb', 11.391], ['css', 4.526], ['js', 3.698], ['md', 0.044]]); 
         var options = {
                       title: 'Size by File Extention',
                       pieHole: 0.3,
-                      chartArea:{width:'80%',height:'80%', left:'1%'},
+                      chartArea:{width:'70%',height:'70%', left:'1%'},
                       titleTextStyle: {color: 'Black', fontName: 'Arial', fontSize: 15},
                       legend: {position: 'bottom'}};
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -116,14 +116,14 @@
     <tr>
       <th>html</th>
       <td>10.0</td>
-      <td>6992.46</td>
-      <td>63.83</td>
+      <td>6992.63</td>
+      <td>63.84</td>
     </tr>
     <tr>
       <th>jpg</th>
       <td>6.0</td>
       <td>3474.44</td>
-      <td>31.71</td>
+      <td>31.72</td>
     </tr>
     <tr>
       <th>pdf</th>
@@ -146,8 +146,8 @@
     <tr>
       <th>css</th>
       <td>1.0</td>
-      <td>6.24</td>
-      <td>0.06</td>
+      <td>4.53</td>
+      <td>0.04</td>
     </tr>
     <tr>
       <th>js</th>
