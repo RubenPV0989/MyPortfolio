@@ -4,9 +4,9 @@ import datetime
 import os
 
 
-report_path = 'D:\\My Projects\\R\\SQLiteStressTest\\report_MSSQL.csv'
+report_path = '' #place where do you want to save the report
 
-cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};Server=LAPTOP-UJOFAFFN\SQLEXPRESS;Database=master;Trusted_Connection=yes')
+cnxn = pyodbc.connect('') # place your connection string
 cursor = cnxn.cursor()
 
 for x in range(1,60): #insert columns 
