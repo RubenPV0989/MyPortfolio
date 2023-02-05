@@ -64,7 +64,7 @@
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
-        var data = google.visualization.arrayToDataTable([['File type', 'Size'], ['html', 6993.091], ['jpg', 3474.441], ['pdf', 280.67], ['jpeg', 186.387], ['ipynb', 11.345], ['css', 4.526], ['js', 3.698], ['md', 0.044]]); 
+        var data = google.visualization.arrayToDataTable([['File type', 'Size'], ['html', 7777.517], ['jpg', 3474.441], ['csv', 859.2850000000001], ['pdf', 280.67], ['ipynb', 197.056], ['jpeg', 186.387], ['css', 4.526], ['py', 3.902], ['js', 3.698], ['md', 0.044]]); 
         var options = {
                       title: 'Size by File Extention',
                       pieHole: 0.3,
@@ -99,11 +99,18 @@
 </pre><pre>├── js
 </pre><pre>│   └── lib.js
 </pre><pre>├── jupyter
-</pre><pre>│   └── FileScan
-</pre><pre>│       ├── FileSystem_Scan.html
-</pre><pre>│       ├── FileSystem_Scan.ipynb
-</pre><pre>│       ├── report.html
-</pre><pre>│       └── template.html
+</pre><pre>│   ├── FileScan
+</pre><pre>│   │   ├── FileSystem_Scan.html
+</pre><pre>│   │   ├── FileSystem_Scan.ipynb
+</pre><pre>│   │   ├── report.html
+</pre><pre>│   │   └── template.html
+</pre><pre>│   └── SqlStressTesting
+</pre><pre>│       ├── SQL_stress_testing.html
+</pre><pre>│       ├── SQL_stress_testing.ipynb
+</pre><pre>│       ├── report_MSSQL.csv
+</pre><pre>│       ├── report_SQLite.csv
+</pre><pre>│       ├── testMSSQL.py
+</pre><pre>│       └── testSQLite.py
 </pre><pre>├── jupyter.html
 </pre><pre>├── rmarkdown
 </pre><pre>│   ├── Bicycle-Trip-Analysis-R.html
@@ -124,33 +131,39 @@
   <tbody>
     <tr>
       <th>html</th>
-      <td>10.0</td>
-      <td>6993.09</td>
-      <td>63.84</td>
+      <td>11.0</td>
+      <td>7777.52</td>
+      <td>60.82</td>
     </tr>
     <tr>
       <th>jpg</th>
       <td>6.0</td>
       <td>3474.44</td>
-      <td>31.72</td>
+      <td>27.17</td>
+    </tr>
+    <tr>
+      <th>csv</th>
+      <td>2.0</td>
+      <td>859.29</td>
+      <td>6.72</td>
     </tr>
     <tr>
       <th>pdf</th>
       <td>2.0</td>
       <td>280.67</td>
-      <td>2.56</td>
+      <td>2.19</td>
+    </tr>
+    <tr>
+      <th>ipynb</th>
+      <td>2.0</td>
+      <td>197.06</td>
+      <td>1.54</td>
     </tr>
     <tr>
       <th>jpeg</th>
       <td>1.0</td>
       <td>186.39</td>
-      <td>1.70</td>
-    </tr>
-    <tr>
-      <th>ipynb</th>
-      <td>1.0</td>
-      <td>11.35</td>
-      <td>0.10</td>
+      <td>1.46</td>
     </tr>
     <tr>
       <th>css</th>
@@ -162,6 +175,12 @@
       <th>js</th>
       <td>1.0</td>
       <td>3.70</td>
+      <td>0.03</td>
+    </tr>
+    <tr>
+      <th>py</th>
+      <td>2.0</td>
+      <td>3.90</td>
       <td>0.03</td>
     </tr>
     <tr>
