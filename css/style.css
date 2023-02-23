@@ -113,9 +113,11 @@ td:nth-child(n+3){
 td:hover:nth-child(n+3){
   font-size: 0.8em;
   }
-  ul{
-    font-size: 1em;
-    }
+
+ul{
+  font-size: 1em;
+  }
+
 p{
   font-size: 1em;
   }
@@ -150,7 +152,29 @@ p{
 .main_nav .active{
   opacity: 1;
   }
-    
+
+.cert_div{
+  margin-top: 1%;
+  margin-bottom: 1%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  height:260px;
+  position: relative;
+}
+.wrapper{
+  position: absolute;
+  bottom: 0px;
+}
+.wrapper img{
+  display:inline-block;
+  transition: border 0.5s;
+  width: 250px;
+  height: 210px;
+}
+
+.wrapper img:hover{
+  padding-bottom: 30px;
+}
 section{
   margin-top: 15%;
   display:inline-block;
@@ -160,7 +184,6 @@ section{
   height: 90%;
   padding: 1%;
   }
-
 
   @media (min-width: 650px) {
     #profile {
