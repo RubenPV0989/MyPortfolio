@@ -41,6 +41,7 @@
                   width: 30vw;
                   height: 80vh;
                   display: inline-block;
+                  overflow-x: scroll;
                 }
               #pie_cont{
                   width: 35vw;
@@ -64,7 +65,7 @@
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
-        var data = google.visualization.arrayToDataTable([['File type', 'Size'], ['html', 7777.517], ['jpg', 3474.441], ['csv', 859.2850000000001], ['pdf', 280.67], ['ipynb', 197.056], ['jpeg', 186.387], ['css', 4.526], ['py', 3.902], ['js', 3.698], ['md', 0.044]]); 
+        var data = google.visualization.arrayToDataTable([['File type', 'Size'], ['html', 7792.2970000000005], ['jpg', 3474.441], ['png', 2509.842], ['pdf', 2437.678], ['csv', 859.2850000000001], ['ipynb', 195.76500000000001], ['jpeg', 186.387], ['css', 4.871], ['py', 3.7800000000000002], ['js', 3.698], ['md', 0.044]]); 
         var options = {
                       title: 'Size by File Extention',
                       pieHole: 0.3,
@@ -82,6 +83,15 @@
           <div id="master">
             <div id="file_tree"><h2>File Tree</h2><pre>*
 </pre><pre>├── README.md
+</pre><pre>├── certificates
+</pre><pre>│   ├── Data_Analyst_Carso.pdf
+</pre><pre>│   ├── Data_Mining_Carso.pdf
+</pre><pre>│   ├── Data_Science_Fundamentals_with_Python_and_SQL_Program_Coursera.pdf
+</pre><pre>│   ├── Google_Data_Analytics_Program_Coursera.pdf
+</pre><pre>│   ├── Google_IT_Automation_with_Python_Program_Coursera.pdf
+</pre><pre>│   ├── Probabilidad_y_Estadistica_Coursera.pdf
+</pre><pre>│   ├── Python_for_Everyone_Coursera.pdf
+</pre><pre>│   └── Web_Design_for_Everyone_Coursera.pdf
 </pre><pre>├── css
 </pre><pre>│   └── style.css
 </pre><pre>├── cv
@@ -94,6 +104,15 @@
 </pre><pre>│   ├── real_monte1.jpg
 </pre><pre>│   ├── real_monte2.jpg
 </pre><pre>│   ├── real_monte4.jpeg
+</pre><pre>│   ├── thumbnail
+</pre><pre>│   │   ├── Data_Analyst_Carso_thumbnail.png
+</pre><pre>│   │   ├── Data_Mining_Carso_thumbnail.png
+</pre><pre>│   │   ├── Data_Science_Fundamentals_with_Python_and_SQL_Program_Coursera_thumbnail.png
+</pre><pre>│   │   ├── Google_Data_Analytics_Program_Coursera_thumbnail.png
+</pre><pre>│   │   ├── Google_IT_Automation_with_Python_Program_Coursera_thumbnail.png
+</pre><pre>│   │   ├── Probabilidad_y_Estadistica_Coursera_thumbnail.png
+</pre><pre>│   │   ├── Python_for_Everyone_Coursera_thumbnail.png
+</pre><pre>│   │   └── Web_Design_for_Everyone_Coursera_thumbnail.png
 </pre><pre>│   └── view_home1.jpg
 </pre><pre>├── index.html
 </pre><pre>├── js
@@ -132,56 +151,62 @@
     <tr>
       <th>html</th>
       <td>11.0</td>
-      <td>7777.52</td>
-      <td>60.82</td>
+      <td>7792.30</td>
+      <td>44.61</td>
     </tr>
     <tr>
       <th>jpg</th>
       <td>6.0</td>
       <td>3474.44</td>
-      <td>27.17</td>
+      <td>19.89</td>
+    </tr>
+    <tr>
+      <th>png</th>
+      <td>8.0</td>
+      <td>2509.84</td>
+      <td>14.37</td>
+    </tr>
+    <tr>
+      <th>pdf</th>
+      <td>10.0</td>
+      <td>2437.68</td>
+      <td>13.96</td>
     </tr>
     <tr>
       <th>csv</th>
       <td>2.0</td>
       <td>859.29</td>
-      <td>6.72</td>
-    </tr>
-    <tr>
-      <th>pdf</th>
-      <td>2.0</td>
-      <td>280.67</td>
-      <td>2.19</td>
+      <td>4.92</td>
     </tr>
     <tr>
       <th>ipynb</th>
       <td>2.0</td>
-      <td>197.06</td>
-      <td>1.54</td>
+      <td>195.77</td>
+      <td>1.12</td>
     </tr>
     <tr>
       <th>jpeg</th>
       <td>1.0</td>
       <td>186.39</td>
-      <td>1.46</td>
+      <td>1.07</td>
     </tr>
     <tr>
       <th>css</th>
       <td>1.0</td>
-      <td>4.53</td>
-      <td>0.04</td>
+      <td>4.87</td>
+      <td>0.03</td>
     </tr>
     <tr>
       <th>js</th>
       <td>1.0</td>
       <td>3.70</td>
-      <td>0.03</td>
+      <td>0.02</td>
     </tr>
     <tr>
       <th>py</th>
       <td>2.0</td>
-      <td>3.90</td>
-      <td>0.03</td>
+      <td>3.78</td>
+      <td>0.02</td>
     </tr>
     <tr>
       <th>md</th>
