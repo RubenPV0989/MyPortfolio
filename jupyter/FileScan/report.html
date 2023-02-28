@@ -30,6 +30,9 @@
             #piechart{
                 padding-left: 8%;
               }
+            #file_tree{
+                overflow-x: scroll;
+              }
             .dataframe{
               margin: 0 auto;
             }
@@ -65,7 +68,7 @@
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
-        var data = google.visualization.arrayToDataTable([['File type', 'Size'], ['html', 7792.2970000000005], ['jpg', 3474.441], ['png', 2509.842], ['pdf', 2437.678], ['csv', 859.2850000000001], ['ipynb', 195.76500000000001], ['jpeg', 186.387], ['css', 4.871], ['py', 3.7800000000000002], ['js', 3.698], ['md', 0.044]]); 
+        var data = google.visualization.arrayToDataTable([['File type', 'Size'], ['html', 7792.475], ['jpg', 3474.441], ['png', 2509.842], ['pdf', 2437.678], ['csv', 859.2850000000001], ['ipynb', 195.76500000000001], ['jpeg', 186.387], ['css', 4.871], ['py', 3.7800000000000002], ['js', 3.698], ['md', 0.044]]); 
         var options = {
                       title: 'Size by File Extention',
                       pieHole: 0.3,
@@ -151,7 +154,7 @@
     <tr>
       <th>html</th>
       <td>11.0</td>
-      <td>7792.30</td>
+      <td>7792.48</td>
       <td>44.61</td>
     </tr>
     <tr>
@@ -170,7 +173,7 @@
       <th>pdf</th>
       <td>10.0</td>
       <td>2437.68</td>
-      <td>13.96</td>
+      <td>13.95</td>
     </tr>
     <tr>
       <th>csv</th>
