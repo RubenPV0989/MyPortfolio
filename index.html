@@ -9,7 +9,7 @@
         <title>My Profile: Cesar Perez</title>
     </head>
 
-    <body onload="update_theme(); load_language()">
+    <body onload="update_theme(); load_language(); set_menus_off();">
         <header> 
             <nav>
                 <button type="button" id = "to_eng" onclick="change_language('eng','esp')">ENG</button>
@@ -24,15 +24,55 @@
             <img src="img/MyPic.jpg" alt="My photo" id = "profile">   
         </header>
         <nav class="eng main_nav">
-            <a href="index.html" class="active">Home</a>
-            <a href="rmarkdown.html">R Markdown</a>
-            <a href="jupyter.html">Jupyter</a>
+            <button class="mainmenubtn" onclick="show_hide_menu('dropdown-child_root', 'dropdown-child_root_storage', 'block')"><i class="fa-solid fa-bars  fa-2x"></i></button>
+            <div class="dropdown">
+                    <nav class="dropdown-child_root">
+                        <nav>
+                            <a href="index.html" class="active">Home</a>
+                        </nav>
+                    </nav>
+                    <nav class="dropdown-child_root">
+                        <button class="sub_menubtn" onclick="show_hide_menu('dropdown-child_notebooks', 'dropdown-child_notebooks_storage', 'block')">Notebooks</button>
+                        
+                        <nav class="dropdown-child_notebooks">
+                            <a href="rmarkdown.html">R Markdown</a>
+                            <a href="jupyter.html">Jupyter</a>
+                        </nav>
+                    </nav>
+    
+                    <nav class="dropdown-child_root">
+                        <button class="sub_menubtn" onclick="show_hide_menu('dropdown-child_yt', 'dropdown-child_yt_storage', 'block')">Youtube</button>
+                        <nav class="dropdown-child_yt">
+                            <a href="FirstStepsOnPython.html">First Steps on Python</a>
+                        </nav>
+                    </nav>
+            </div>
         </nav>
         <nav class="esp main_nav">
-            <a href="index.html" class="active">Inicio</a>
-            <a href="rmarkdown.html">R Markdown</a>
-            <a href="jupyter.html">Jupyter</a>
-        </nav>
+            <button class="mainmenubtn" onclick="show_hide_menu('dropdown-child_root', 'dropdown-child_root_storage', 'block')"><i class="fa-solid fa-bars  fa-2x"></i></button>
+            <div class="dropdown">
+                    <nav class="dropdown-child_root">
+                        <nav>
+                            <a href="index.html" class="active">Inicio</a>
+                        </nav>
+                    </nav>
+                    <nav class="dropdown-child_root">
+                        <button class="sub_menubtn" onclick="show_hide_menu('dropdown-child_notebooks', 'dropdown-child_notebooks_storage', 'block')">Notebooks</button>
+                        
+                        <nav class="dropdown-child_notebooks">
+                            <a href="rmarkdown.html">R Markdown</a>
+                            <a href="jupyter.html">Jupyter</a>
+                        </nav>
+                    </nav>
+    
+                    <nav class="dropdown-child_root">
+                        <button class="sub_menubtn" onclick="show_hide_menu('dropdown-child_yt', 'dropdown-child_yt_storage', 'block')">Youtube</button>
+                        <nav class="dropdown-child_yt">
+                            <a href="FirstStepsOnPython.html">First Steps on Python</a>
+                        </nav>
+                    </nav>
+                </div>
+            </nav>
         <section class="eng">
             <h1>César Rubén Pérez Valdés</h1>
             <h1>Introduction</h1>

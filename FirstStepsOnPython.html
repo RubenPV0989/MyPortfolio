@@ -10,11 +10,11 @@
     </head>
 
     <body onload="update_theme(); load_language(); set_menus_off();">
-        <header>
+        <header> 
             <nav>
                 <button type="button" id = "to_eng" onclick="change_language('eng','esp')">ENG</button>
                 <button type="button" id = "to_esp" onclick="change_language('esp','eng')">ESP</button>
-            </nav> 
+            </nav>
             <nav>
                 <a href="cv/CV_Cesar_Perez_Eng.pdf" target="_blank" class="eng"><i class="fa-solid fa-file-pdf  fa-3x"></i></a>
                 <a href="cv/CV_Cesar_Perez_Esp.pdf" target="_blank" class="esp"><i class="fa-solid fa-file-pdf  fa-3x"></i></a>
@@ -36,14 +36,14 @@
                         
                         <nav class="dropdown-child_notebooks">
                             <a href="rmarkdown.html">R Markdown</a>
-                            <a href="jupyter.html" class="active">Jupyter</a>
+                            <a href="jupyter.html">Jupyter</a>
                         </nav>
                     </nav>
     
                     <nav class="dropdown-child_root">
                         <button class="sub_menubtn" onclick="show_hide_menu('dropdown-child_yt', 'dropdown-child_yt_storage', 'block')">Youtube</button>
                         <nav class="dropdown-child_yt">
-                            <a href="FirstStepsOnPython.html">First Steps on Python</a>
+                            <a href="FirstStepsOnPython.html" class="active">First Steps on Python</a>
                         </nav>
                     </nav>
             </div>
@@ -61,70 +61,65 @@
                         
                         <nav class="dropdown-child_notebooks">
                             <a href="rmarkdown.html">R Markdown</a>
-                            <a href="jupyter.html" class="active">Jupyter</a>
+                            <a href="jupyter.html">Jupyter</a>
                         </nav>
                     </nav>
     
                     <nav class="dropdown-child_root">
                         <button class="sub_menubtn" onclick="show_hide_menu('dropdown-child_yt', 'dropdown-child_yt_storage', 'block')">Youtube</button>
                         <nav class="dropdown-child_yt">
-                            <a href="FirstStepsOnPython.html">First Steps on Python</a>
+                            <a href="FirstStepsOnPython.html" class="active">First Steps on Python</a>
                         </nav>
                     </nav>
                 </div>
             </nav>
+        
         <section class="eng">
-                <h1>Jupyter</h1>
-                <p>In this section, you will find <b>Python</b> coding examples, most of them focused on automation of IT task.</p> 
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Notebook</th>
-                    </tr>
-                    <tr>
-                        <td>Indeed Job Search With Python</td>
-                        <td>This article shows a basic web-scraping example using selenium library. One CSV file and two HTML files are crated as output</td>
-                        <td><a href="jupyter\Job_posting_web_scraping\Indeed_web_scraping.html" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
-                    </tr>
-                    <tr>
-                        <td>Using Recursive Functions to Scan the File System</td>
-                        <td>This article shows how to use recursive functions, the use case will be to generate a report having information about our file system, we'll use this repo as data source.</td>
-                        <td><a href="jupyter\FileScan\FileSystem_Scan.html" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
-                    </tr>
-                    <tr>
-                        <td>SQL Stress Testing</td>
-                        <td>This article shows the results of a simple stress test to compare the performance of two SQL libraries, sqlite3 and pyodbc.</td>
-                        <td><a href="jupyter\SqlStressTesting\SQL_stress_testing.html" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
-                    </tr>
-                </table>
+            <h1>First Steps on Python</h1>
+            <p>This project is dedicated to share basic Python knowledge to anyone starting on this programming language. The videos can be divided in two categories 1. Tutorials, where I present fun projects step by step 2. Lessons, where I focus on a particular topic. For now, the project is being hosted on YouTube.</p>
+            <div style="position:relative;">
+                <div style="position:absolute; top:5px; left:0;">
+                    <img src="img/FSoP.png" alt="Logo" style = 'opacity: 1;align-content: center; height: 80%; width: 80%; display: block; margin-left: auto;margin-right: auto;border-radius:50% 50% 50% 50%;'>
+                </div>
+                <div style="position:absolute; top:0; left:0;">
+                    <table>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Link</th>
+                        </tr>
+                        <tr style="opacity: 0.8;">
+                            <td>Tutorial 1: Making Christmas Cards with Python</td>
+                            <td>Here, we'll explore basic PDF creation using Python, the use case scenario is creating Christmas cards for friends and family.</td>
+                            <td><a href="https://www.youtube.com/watch?v=lnXkibFr8Zw&t=39s" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </section>
         <section class="esp">
-            <h1>Jupyter</h1>
-            <p>En esta sección encontraras ejemplos de programación en <b>Python</b>, principalmente enfocados a la automatización de tareas en TI.</p> 
-            <table>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Notebook</th>
-                </tr>
-                <tr>
-                    <td>Indeed Job Search With Python</td>
-                    <td>Este artículo presenta un ejemplo básico de web-scraping utilizando la libreria selenium. se genera un archivo CSV y dos HTML como productos de salida.</td>
-                    <td><a href="jupyter\Job_posting_web_scraping\Indeed_web_scraping.html" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
-                </tr>
-                <tr>
-                    <td>Using Recursive Functions to Scan the File System</td>
-                    <td>Este artículo muestra un ejemplo de uso de funciones recursivas. El caso de uso será la generación de un reporte sobre nuestro file system, utilizaremos este mismo repo como ejemplo.</td>
-                    <td><a href="jupyter\FileScan\FileSystem_Scan.html" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
-                </tr>
-                <tr>
-                    <td>SQL Stress Testing</td>
-                    <td>En este artículo se compara en desempeño de dos librerias SQL, sqlite3 y pyodbc a través de una prueba de estrés</td>
-                    <td><a href="jupyter\SqlStressTesting\SQL_stress_testing.html" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
-                </tr>
-                
-            </table>
-    </section>
+            <h1>First Steps on Python</h1>
+            <p>Este proyecto está dedicado a compartir conocimiento basico en Python a cualquier persona iniciandose en este lenguaje de programación. Los videos se pueden dividir en dos categorias, 1. Tutoriales, en donde presentaré proyectos cortos entretenidos paso a paso 2. Lecciones, en donde me centro en la exposiión de un tema concreto. Actualmente, este proyecto está disponible en YouTube.</p>
+            <div style="position:relative;">
+                <div style="position:absolute; top:5px; left:0;">
+                    <img src="img/FSoP.png" alt="Logo" style = 'opacity: 1;align-content: center; height: 80%; width: 80%; display: block; margin-left: auto;margin-right: auto;border-radius:50% 50% 50% 50%;'>
+                </div>
+                <div style="position:absolute; top:0; left:0;">
+                    <table>
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Descripción</th>
+                            <th>Enlace</th>
+                        </tr>
+                        <tr style="opacity: 0.8;">
+                            <td>Tutorial 1: Making Christmas Cards with Python</td>
+                            <td>Aquí exploramos conceptos básicos para crear PDFs. El caso de uso consiste en crear tarjetas de navidad para la familia y amigos.</td>
+                            <td><a href="https://www.youtube.com/watch?v=lnXkibFr8Zw&t=39s" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
     </body>
 </html>
+        

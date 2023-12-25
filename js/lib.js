@@ -1,3 +1,28 @@
+// this funtion controls the main navigation menu (bars icon)
+function show_hide_menu(level, storage, display) { 
+    var show_main_status = localStorage.getItem(storage)
+    if (show_main_status == 0 || show_main_status == undefined){
+        var to_show = Array.from(document.getElementsByClassName(level));
+        to_show.forEach(element => {
+        element.style.display= display;
+        });
+        localStorage.setItem(storage, 1);
+        
+    } else {
+        var to_show = Array.from(document.getElementsByClassName(level));
+        to_show.forEach(element => {
+        element.style.display= 'none';
+        });
+        localStorage.setItem(storage, 0);
+        }
+    }
+// this funtion return menu values to 0 by default
+function set_menus_off(){
+    localStorage.setItem('dropdown-child_root_storage', 0);
+    localStorage.setItem('dropdown-child_notebooks_storage', 0);
+    localStorage.setItem('dropdown-child_yt_storage', 0);
+    }
+
 // this funtion works with the buttons ESP / ENG
 function change_language(show,hide) { 
     var to_show = Array.from(document.getElementsByClassName(show));
