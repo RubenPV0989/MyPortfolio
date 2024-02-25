@@ -4,9 +4,9 @@ import datetime
 import os
 
 
-report_path = '' #place where do you want to save the report
+report_path = '' #place where you want to save the report
 
-cnxn = pyodbc.connect('') # place your connection string
+cnxn = pyodbc.connect('') # place your SQL connection string
 cursor = cnxn.cursor()
 
 for x in range(1,60): #insert columns 

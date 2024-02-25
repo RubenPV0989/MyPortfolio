@@ -3,7 +3,7 @@ import pandas as pd
 import datetime
 import os
 
-report_path = '' #place where do you want to save your report 
+report_path = '' #place where you want to save your report 
 db_path = '' #points to your sqlite file
 conn = sqlite3.connect(db_path)
 cur = conn.cursor()

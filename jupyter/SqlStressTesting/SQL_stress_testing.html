@@ -14580,7 +14580,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="SQL-Stress-Testing.">SQL Stress Testing.<a class="anchor-link" href="#SQL-Stress-Testing.">&#182;</a></h1><p>By César Pérez</p>
-<h2 id="Introduction.">Introduction.<a class="anchor-link" href="#Introduction.">&#182;</a></h2><p>In this notebook I'll describe a test to compare the performance of two python SQL libraries, sqlite3 and pyodbc. In particular, I am going to focus on INSERT and SELECT statements. To achieve this, I've created two scripts to increasingly add more rows and columns to an SQLite and MSSQL database and capture the timestamps just before and after the task execution as a way to measure the time taken to complete. Both scripts updates an CSV report containing values such as: operation performed, rows added, existing rows, start / end times and their difference differece. In this notebook, I won't directly describe the scripts that I've used to test the performace, they are available in the links bellow.</p>
+<h2 id="Introduction.">Introduction.<a class="anchor-link" href="#Introduction.">&#182;</a></h2><p>In this notebook I'll describe a test to compare the performance of two python libraries to manage SQL, sqlite3 and pyodbc. For this exercise, I am going to focus on INSERT and SELECT statements. I've created two auxiliary scripts to increasingly add rows and columns to an SQLite and MSSQL databases and capture the timestamps just before and after the task execution to measure the time taken to complete. Both scripts create or update a CSV file having values such as: operation performed, rows added, existing rows, start / end times and their differece. In this notebook, I won't directly describe the scripts that I've used to test the performace but they are available in the links bellow.</p>
 <h2 id="Hardware-/-Software-Specs.">Hardware / Software Specs.<a class="anchor-link" href="#Hardware-/-Software-Specs.">&#182;</a></h2><ul>
 <li><p><strong>Processor</strong>: Intel(R) Core(TM) i5-10300H CPU \@ 2.50GHz 2.50 GHz</p>
 </li>
@@ -14599,7 +14599,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <li><strong>SQLite</strong>: <a href="testSQLite.py">testSQLite.py</a></li>
 <li><strong>MSSQL</strong>: <a href="testMSSQL.py">testMSSQL.py</a></li>
 </ul>
-<h2 id="Limitations.">Limitations.<a class="anchor-link" href="#Limitations.">&#182;</a></h2><p>Even if we want to perform the same operation on both databases, the codes cannot be exacly the same (of course, this is besides elements like connection string of DB file). For the SQLite I've used the method executescript() where the SQL command is build by using string manipulation and then passed as a unique paramenter, when we use this same approach on MSSQL using the execute() method, it will work until around 300 rows, then the results vary from the expected behaviour, for example, writting 320 rows when 500 are expected, to fix this problem, MSSQL script use executemany() that uses a parameter to define parameterized SQL queries and a second one to define the values we want to repeat. This difference is method would impact the validity of the experiment, but will still give us a good insight about the performance we can expect when deciding to use any of these options.</p>
+<h2 id="Limitations.">Limitations.<a class="anchor-link" href="#Limitations.">&#182;</a></h2><p>Even if we want to perform the same operation on both databases, the codes cannot be exacly the same. For the SQLite script I've used the method <a href="https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.executescript">executescript()</a>, and for the MSSQL script I've used the method <a href="https://github.com/mkleehammer/pyodbc/wiki/Cursor#executemanysql-params-with-fast_executemanyfalse-the-default">executemany()</a></p>
 
 </div>
 </div>
@@ -14611,15 +14611,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Performance-Analysis.">Performance Analysis.<a class="anchor-link" href="#Performance-Analysis.">&#182;</a></h2><p>To analyse the results, I'm going to:</p>
+<h2 id="Performance-Analysis.">Performance Analysis.<a class="anchor-link" href="#Performance-Analysis.">&#182;</a></h2><p>To analyse the performance, I'm going to:</p>
 <ol>
-<li>Read two CSV files, one having the data from the SQLite database, and the second one from MSSQL.</li>
-<li>Add an additional column having the source data, this will be just one value per file ('SQLite', 'MSSQL'). </li>
-<li>Concatenate both files (for this report I'll exclude a column comming from SQLite, file_size(KB))</li>
-<li>Create two child tables, one for INSERT statements and the second for SELECT statements. </li>
+<li>Read the two CSV files created with the help of the auxiliary scripts mentioned earlier (one having the data from the SQLite database and the second one having the data from the MSSQL database) into pandas dataframes.</li>
+<li>Add an additional 'source' column to each dataframe (the values will be 'SQLite' or 'MSSQL'). </li>
+<li>Concatenate both dataframes (I'll exclude a column comming from SQLite, 'file_size(KB)'), the idea is to combine both csv sources</li>
+<li>From the concatenated dataframe, create two tables, one for INSERT statements and the second for SELECT statements. </li>
 <li>Create visuals per source and SQL command.</li>
 </ol>
-<p>We will keep this report real simple only using two libraries 1. Pandas to manipulate the csv files and 2. Seaborn to create the visuals.</p>
 
 </div>
 </div>
@@ -14924,6 +14923,17 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="INSERT-Statement.">INSERT Statement.<a class="anchor-link" href="#INSERT-Statement.">&#182;</a></h2>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -14969,7 +14979,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;seaborn.axisgrid.FacetGrid at 0x22c369a72b0&gt;</pre>
+<pre>&lt;seaborn.axisgrid.FacetGrid at 0x25d0a8632b0&gt;</pre>
 </div>
 
 </div>
@@ -14996,6 +15006,17 @@ class="
 
 </div>
 
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="SELECT-Statement">SELECT Statement<a class="anchor-link" href="#SELECT-Statement">&#182;</a></h2>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15039,7 +15060,7 @@ class="
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;seaborn.axisgrid.FacetGrid at 0x22c4b843d90&gt;</pre>
+<pre>&lt;seaborn.axisgrid.FacetGrid at 0x25d0a863e80&gt;</pre>
 </div>
 
 </div>
@@ -15073,7 +15094,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Conclusions">Conclusions<a class="anchor-link" href="#Conclusions">&#182;</a></h2><p>The results indicates that the MSSQL script has a much better performance than the SQLite script. It seems that using SQLite in our scripts will provide portability at the expense of performance.</p>
+<h2 id="Conclusions">Conclusions<a class="anchor-link" href="#Conclusions">&#182;</a></h2><p>The results indicates that the MSSQL script and library has a much better performance than the SQLite script. It seems that using SQLite provides portability at the expense of performance.</p>
 
 </div>
 </div>
@@ -15085,7 +15106,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="References">References<a class="anchor-link" href="#References">&#182;</a></h2><p><strong>Panda</strong>. McKinney, W., &amp; others. (2010). Data structures for statistical computing in python. In Proceedings of the 9th Python in Science Conference (Vol. 445, pp. 51–56).</p>
+<h2 id="References">References<a class="anchor-link" href="#References">&#182;</a></h2><p><strong>Pandas</strong>. McKinney, W., &amp; others. (2010). Data structures for statistical computing in python. In Proceedings of the 9th Python in Science Conference (Vol. 445, pp. 51–56).</p>
 <p><strong>Seaborn</strong>. Waskom, M., Botvinnik, Olga. Kane, Drew, Hobson, Paul, Lukauskas, Saulius, Gemperline, David C, … Qalieh, Adel. (2017). mwaskom/seaborn: v0.8.1 (September 2017). Zenodo. <a href="https://doi.org/10.5281/zenodo.883859">https://doi.org/10.5281/zenodo.883859</a></p>
 
 </div>
