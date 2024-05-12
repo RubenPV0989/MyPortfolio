@@ -79,8 +79,8 @@ function update_theme(){
     var current = now.getHours();
     switch(true){
         case (current >= 0 && current < 4):
-            img = 'img/Montreal.jpg'; 
-            color = 'rgb(48, 68, 236)';
+            img = 'img/real_monte4.jpeg';
+            color = 'rgb(147, 17, 34)';
             break;
         case (current >= 4 && current < 8):
             img = 'img/real_monte1.jpg';
@@ -95,8 +95,8 @@ function update_theme(){
             color = 'rgb(95, 124, 255)';  
             break;
         case (current >= 16 && current < 20):
-            img = 'img/real_monte4.jpeg';
-            color = 'rgb(147, 17, 34)';
+            img = 'img/Montreal.jpg'; 
+            color = 'rgb(48, 68, 236)';
             break;
         case (current >= 20 && current < 24):
             img = 'img/view_home1.jpg';
