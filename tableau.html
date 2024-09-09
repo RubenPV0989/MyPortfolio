@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/717b915945.js" crossorigin="anonymous"></script>
+        <script src="js/lib.js"></script>
+        <title>My Profile: Cesar Perez</title>
+    </head>
+
+    <body onload="update_theme(); load_language(); set_menus_off();">
+        <header>
+            <nav>
+                <button type="button" id = "to_eng" onclick="change_language('eng','esp')">ENG</button>
+                <button type="button" id = "to_esp" onclick="change_language('esp','eng')">ESP</button>
+            </nav> 
+            <nav>
+                <a href="cv/CV_Cesar_Perez_Eng.pdf" target="_blank" class="eng"><i class="fa-solid fa-file-pdf  fa-3x"></i></a>
+                <a href="cv/CV_Cesar_Perez_Esp.pdf" target="_blank" class="esp"><i class="fa-solid fa-file-pdf  fa-3x"></i></a>
+                <a href="https://www.linkedin.com/in/c%C3%A9sar-rub%C3%A9n-p%C3%A9rez-vald%C3%A9s-b77676113/" target="_blank"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+                <a href="mailto:perezvaldesruben@gmail.com"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i></a>
+            </nav>
+            <img src="img/MyPic.jpg" alt="My photo" id = "profile">   
+        </header>
+        <nav class="eng main_nav">
+            <button class="mainmenubtn" onclick="show_hide_menu('dropdown-child_root', 'dropdown-child_root_storage', 'block')"><i class="fa-solid fa-bars  fa-2x"></i></button>
+            <div class="dropdown">
+                    <nav class="dropdown-child_root">
+                        <nav>
+                            <a href="index.html">Home</a>
+                        </nav>
+                    </nav>
+
+                    <nav class="dropdown-child_root">
+                        <button class="sub_menubtn" onclick="show_hide_menu('dropdown-child_notebooks', 'dropdown-child_notebooks_storage', 'block')">Notebooks</button>
+                        <nav class="dropdown-child_notebooks">
+                            <a href="rmarkdown.html">R Markdown</a>
+                            <a href="jupyter.html">Jupyter</a>
+                        </nav>
+                    </nav>
+    
+                    <nav class="dropdown-child_root">
+                        <button class="sub_menubtn" onclick="show_hide_menu('dropdown-child_yt', 'dropdown-child_yt_storage', 'block')">Youtube</button>
+                        <nav class="dropdown-child_yt">
+                            <a href="FirstStepsOnPython.html">First Steps on Python</a>
+                        </nav>
+                    </nav>
+
+                    <nav class="dropdown-child_root">
+                        <button class="sub_menubtn" onclick="show_hide_menu('dropdown-child_dashboard', 'dropdown-child_dashboard_storage', 'block')">Dashboards</button>
+                        <nav class="dropdown-child_dashboard">
+                            <a href="tableau.html" class="active">Tableau</a>
+                        </nav>
+                    </nav>
+            </div>
+        </nav>
+        <nav class="esp main_nav">
+            <button class="mainmenubtn" onclick="show_hide_menu('dropdown-child_root', 'dropdown-child_root_storage', 'block')"><i class="fa-solid fa-bars  fa-2x"></i></button>
+            <div class="dropdown">
+                    <nav class="dropdown-child_root">
+                        <nav>
+                            <a href="index.html">Inicio</a>
+                        </nav>
+                    </nav>
+                    <nav class="dropdown-child_root">
+                        <button class="sub_menubtn" onclick="show_hide_menu('dropdown-child_notebooks', 'dropdown-child_notebooks_storage', 'block')">Notebooks</button>
+                        
+                        <nav class="dropdown-child_notebooks">
+                            <a href="rmarkdown.html">R Markdown</a>
+                            <a href="jupyter.html">Jupyter</a>
+                        </nav>
+                    </nav>
+    
+                    <nav class="dropdown-child_root">
+                        <button class="sub_menubtn" onclick="show_hide_menu('dropdown-child_yt', 'dropdown-child_yt_storage', 'block')">Youtube</button>
+                        <nav class="dropdown-child_yt">
+                            <a href="FirstStepsOnPython.html">First Steps on Python</a>
+                        </nav>
+                    </nav>
+
+                    <nav class="dropdown-child_root">
+                        <button class="sub_menubtn" onclick="show_hide_menu('dropdown-child_dashboard', 'dropdown-child_dashboard_storage', 'block')">Dashboards</button>
+                        <nav class="dropdown-child_dashboard">
+                            <a href="tableau.html" class="active">Tableau</a>
+                        </nav>
+                    </nav>
+                </div>
+            </nav>
+        <section class="eng">
+                <h1>Tableau</h1>
+                <p>In this section, you will find <b>Tableau</b> dashboard examples. These exercises are hosted in Tableau Public.</p> 
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Tableau</th>
+                    </tr>
+                    <tr>
+                        <td>Google Business Intellince Certificate: Google Fiber</td>
+                        <td>In this scenario, we are helping the Google Fiber team Analize their support team performance by comparing the amount of calls that come back after an initial interaction (Day 0) impacting different markets and call types, the dataset includes records from January to March 2022</td>
+                        <td><a href="https://public.tableau.com/views/GoogleBusinessIntelligenceCertificate-GoogleFiber_17258340521990/GoogleBusinessIntelligenceCertificateGoogleFiber?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                    </tr>
+                    
+                    
+                </table>
+        </section>
+        <section class="esp">
+            <h1>Tableau</h1>
+            <p>En esta sección encontraras dashboards diseñados en <b>Tableau</b>, mismos que estan alojados en Tableau Public.</p> 
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Tableau</th>
+                </tr>
+                <tr>
+                    <td>Google Business Intellince Certificate: Google Fiber</td>
+                    <td>En este escenario, apoyaremos al equipo de Google Fiber a analizar datos sobre el rendimiento de su equipo de soporte al comparar la cantidad de casos en donde una llamada regresa despues de una interaccion inicial (Day 0) a través de diferentes mercados y tipo de llamada. Los datos comprenden registros desde enero a marzo del 2022</td>
+                    <td><a href="https://public.tableau.com/views/GoogleBusinessIntelligenceCertificate-GoogleFiber_17258340521990/GoogleBusinessIntelligenceCertificateGoogleFiber?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank"><i class="fa-solid fa-circle-chevron-right"></i></a></td>
+                </tr>
+            </table>
+    </section>
+    </body>
+</html>

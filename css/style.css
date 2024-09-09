@@ -36,6 +36,9 @@ header{
   display: none;
 }
 
+.dropdown-child_dashboard {
+  display: none;
+}
 
   header nav{
     float:right;
