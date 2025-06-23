@@ -280,11 +280,12 @@ section{
         position: static;
         background-color: rgb(255, 255, 255);
         width: 78%;
-        height:110vh;
+        height:120vh;
+        overflow-y: scroll;
         padding: 0%;
         float: right;
         margin-top: 0%;
-        overflow-y: auto;
+        
       }
   
       h1 {
