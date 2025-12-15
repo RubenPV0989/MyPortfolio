@@ -22,6 +22,7 @@ function set_menus_off(){
     localStorage.setItem('dropdown-child_notebooks_storage', 0);
     localStorage.setItem('dropdown-child_yt_storage', 0);
     localStorage.setItem('dropdown-child_dashboard_storage', 0);
+    localStorage.setItem('dropdown-child_django_storage',0); 
     }
 
 // this funtion works with the buttons ESP / ENG

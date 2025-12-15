@@ -40,6 +40,10 @@ header{
   display: none;
 }
 
+.dropdown-child_django {
+  display: none;
+}
+
   header nav{
     float:right;
     display: block;
